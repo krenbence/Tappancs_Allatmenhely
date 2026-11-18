@@ -1,4 +1,4 @@
-![Tappancs Állatmenhely](images/Tappancs Állatmenhely arculat (1).png)
+![Tappancs Állatmenhely](images/banner.png)
 
 # 🐾 Tappancs Állatmenhely
 
