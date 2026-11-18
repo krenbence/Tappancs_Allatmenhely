@@ -1,0 +1,336 @@
+<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>1508</x><y>1092</y><w>195</w><h>299</h></coordinates><panel_attributes>&lt;&lt;interafce&gt;&gt;
+IAllat
+-
++ id : number
++ nev : string
++ statusz : Estatusz
++ faj : Efaj
++ fajta : string
++ ivar : boolean
++ meret : Emeret
++ szuletesiDatum : Date
++ leiras : string
++ kep : string
++ ivartalanitva : boolean
++ chip : number
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>1404</y><w>156</w><h>143</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Efaj
+-
+Kutya
+Macska
+Nyul
+Tengerimalac
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>1144</y><w>156</w><h>117</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Estatusz
+-
+Leadasban
+Orokbefogadhato
+Orokbefogadasban
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>845</x><y>806</y><w>871</w><h>1417</h></coordinates><panel_attributes>AllatHandler
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>858</x><y>1092</y><w>390</w><h>1118</h></coordinates><panel_attributes>Allat
+-
+- _id : number
+- _nev : string
+- _statusz : Estatusz
+- _faj : Efaj
+- _fajta : string
+- _ivar : boolean
+- _meret : Emeret
+- _szuletesiDatum : Date
+- _leiras : string
+- _kep : string
+- _ivartalanitva : boolean
+- _chip : number
+-
++ constructor( allat : Partial&lt;IAllat&gt; = {} )
+
++ toJSON() : IAllat
+
++ set id( value : number ) : number
++ get id() : number
+
++ set nev( value : string ) : string
++ get nev() : string
+
++ set statusz( value : Estatusz ) : Estatusz
++ get statusz() : Estatusz
+
++ set faj( value : Efaj ) : Efaj
++ get faj() : Efaj
+
++ set fajta( value : string ) : string
++ get fajta() : string
+
++ set ivar ( value : boolean ) : boolean
++ get ivar() : boolean
+
++ set meret( value : Emeret ) : Emeret
++ get meret() : Emeret
+
++ set szuletesiDatum( value : Date ) : Date
++ get szuletesiDatum() : Date
+
++ set leiras( value : string ) : string
++ get leiras() : string
+
++ set kep( value : string ) : string
++ get kep() : string
+
++ set ivartalanitva( value : boolean ) : boolean
++ get ivartalanitva() : boolean
+
++ set chip( value : number) : number
++ get chip() : number
+
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>1274</y><w>156</w><h>117</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Emeret
+-
+Kicsi
+Kozepes
+Nagy
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1443</x><y>1157</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1443</x><y>1287</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1443</x><y>1378</y><w>143</w><h>78</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>10;40;90;40;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1235</x><y>1157</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1235</x><y>1287</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1235</x><y>1417</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1235</x><y>1092</y><w>299</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;.
+group=group-0</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>845</y><w>741</w><h>221</h></coordinates><panel_attributes>AllatManager
+-
++ &lt;&lt;async&gt;&gt; AllAllatJSON() : Promise&lt;IAllat[]&gt;
+
++ &lt;&lt;async&gt;&gt; AllatById( id:number ) : Promise&lt;IAllat | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; AllatHozzaadasa( allat : Partial&lt;IAllat&gt; ) : Promise&lt;IAllat | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; AllatModositasa( id : number, modositas : Partial&lt;IAllat&gt; ) : Promise&lt;IAllat | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; AllatTorlese( id : number ) : Promise&lt;boolean&gt;
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1638</x><y>845</y><w>65</w><h>273</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-0</panel_attributes><additional_attributes>30;190;30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>871</x><y>845</y><w>65</w><h>273</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-0</panel_attributes><additional_attributes>10;190;10;10;30;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1274</x><y>2132</y><w>416</w><h>78</h></coordinates><panel_attributes>A kep tartalma egy url 
+ami rámutat a fajlra ahol 
+a képek találhatoak
+bg=blue
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>559</x><y>1131</y><w>195</w><h>117</h></coordinates><panel_attributes>&lt;&lt;interafce&gt;&gt;
+IOltas
+-
++ id : number
++ nev : string
++ leiras : string
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>13</x><y>1144</y><w>325</w><h>338</h></coordinates><panel_attributes>Oltas
+-
+- _id : number
+- _nev : string
+- _leiras : string
+-
++ constructor( oltas : Partial&lt;IOltas&gt; = {} )
+
++ toJSON() : IOltas
+
++ set id( value : number ) : number
++ get id() : number
+
++ set nev( value : string ) : string
++ get nev() : string
+
++ set leiras( value : string ) : string
++ get leiras() : string
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>325</x><y>1131</y><w>260</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;.
+group=group-1</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>13</x><y>858</y><w>741</w><h>221</h></coordinates><panel_attributes>OltasManager
+-
++ &lt;&lt;async&gt;&gt; AllOltasJSON() : Promise&lt;IOltas[]&gt;
+
++ &lt;&lt;async&gt;&gt; OltasById( id:number ) : Promise&lt;IOltast | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; OltasHozzaadasa( oltas : Partial&lt;IOltas&gt; ) : Promise&lt;IOltas | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; OltasModositasa( id : number, modositas : Partial&lt;IOltas&gt; ) : Promise&lt;IOltas | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; OltasTorlese( id : number ) : Promise&lt;boolean&gt;
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>637</x><y>1066</y><w>39</w><h>91</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-1</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>169</x><y>1066</y><w>39</w><h>104</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-1</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>819</y><w>767</w><h>676</h></coordinates><panel_attributes>OltasHandler
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2470</x><y>1196</y><w>195</w><h>234</h></coordinates><panel_attributes>&lt;&lt;interafce&gt;&gt;
+IFelhasznalo
+-
++ id : number
++ rang : Erang
++ vezeteknev : string
++ keresztnev : string
++ email : string
++ telefonszam : number
++ szuletesiDatum : Date
++ regisztracioDatuma : Date
++ jelszo : hashstring
+group=group-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2275</x><y>1274</y><w>143</w><h>104</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Erang
+-
+Felhasznalo
+Admin
+group=group-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1807</x><y>1196</y><w>416</w><h>754</h></coordinates><panel_attributes>Felhasznalo
+-
+- _id : number
+- _rang : Erang
+- _vezeteknev : string
+- _keresztnev : string
+- _email : string
+- _telefonszam : number
+- _szuletesiDatum : Date
+- _regisztracioDatuma : Date
+- _jelszo : hashstring
+-
++ constructor( felhasznalo : Partial&lt;IFelhasznalo&gt; = {} )
+
++ toJSON() : IFelhasznalo
+
++ set id( value : number ) : number
++ get id() : number
+
++ set vezeteknev( value : string ) : string
++ get vezeteknev() : string
+
++ set keresztnev( value : string ) : string
++ get keresztnev() : string
+
++ set email( value : string ) : string
++ get email() : string
+
++ set telefonszam( value : number ) : number
++ get telefonszam() : number
+
++ set szuletesiDatum( value : Date ) : Date
++ get szuletesiDatum() : Date
+
++ set regisztracioDatuma( value : Date ) : Date
++ get regisztracioDatuma() : Date
+
++ set jelszo( value : hashstring ) : hashstring
++ get jelszo() : hashstring
+
+group=group-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2405</x><y>1287</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-2</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2210</x><y>1287</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-2</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2210</x><y>1196</y><w>286</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;.
+group=group-2</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1794</x><y>858</y><w>897</w><h>260</h></coordinates><panel_attributes>FelhasznaloManager
+-
++ &lt;&lt;async&gt;&gt; AllFelhasznaloJSON() : Promise&lt;IFelhasznalo[]&gt;
+
++ &lt;&lt;async&gt;&gt; FelhasznaloById( id:number ) : Promise&lt;IFelhasznalo | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; FelhasznaloHozzaadasa( felhasznalo : Partial&lt;IFelhasznalo&gt; ) : Promise&lt;IFelhasznalo | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; FelhasznaloModositasa( id : number, modositas : Partial&lt;IFelhasznalo&gt; ) : Promise&lt;IFelhasznalo | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; FelhasznaloTorlese( id : number ) : Promise&lt;boolean&gt;
+
++ &lt;&lt;async&gt;&gt; FelhasznaloBejelentkezes( id : number, jelszo: hash ) : Promise&lt;boolean&gt;
+group=group-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2002</x><y>1105</y><w>39</w><h>117</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-2</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2548</x><y>1105</y><w>39</w><h>117</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-2</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1781</x><y>819</y><w>923</w><h>1144</h></coordinates><panel_attributes>FelhasznaloHandler
+group=group-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1911</x><y>312</y><w>208</w><h>143</h></coordinates><panel_attributes>&lt;&lt;interafce&gt;&gt;
+IKerelem
+-
++ id : number
++ felhasznalo_ID : number
++ allat_ID : number
++ kerelemTipus : Ekerelem
+group=group-6</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1378</x><y>325</y><w>325</w><h>416</h></coordinates><panel_attributes>Kerelem
+-
+- _id : number
+- _felhasznalo_ID : number
+- _allat_ID : number
+- _kerelemTipus : Ekerelem
+-
++ constructor( kerelem : Partial&lt;IKerelem&gt; = {} )
+
++ toJSON() : IKerelem
+
++ set id( value : number ) : number
++ get id() : number
+
++ set allat_ID( value : number ) : number
++ get allat_ID() : number
+
++ set oltas_ID( value : number ) : number
++ get oltas_ID() : number
+
++ set kerelemTipus( value : Ekerelem ) : Ekerelem
++ get kerelemTipus() : Ekerelem
+group=group-6</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1690</x><y>312</y><w>247</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;.
+group=group-6</panel_attributes><additional_attributes>170;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1378</x><y>39</y><w>741</w><h>221</h></coordinates><panel_attributes>KerelemManager
+-
++ &lt;&lt;async&gt;&gt; AllOrokbefogadasKerelemJSON() : Promise&lt;IKerelem[]&gt;
+
++ &lt;&lt;async&gt;&gt; AllLeadasKerelemJSON() : Promise&lt;IKerelem[]&gt;
+
++ &lt;&lt;async&gt;&gt; KerelemByFelhasznaloId( id:number ) : Promise&lt;IKerelem[]&gt;
+
++ &lt;&lt;async&gt;&gt; KerelemHozzaadasa( kerelem : Partial&lt;IKerelem&gt; ) : Promise&lt;IKerelem | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; KerelemTorleseByAllatId( id : number ) : Promise&lt;boolean&gt;
+group=group-6</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2002</x><y>247</y><w>39</w><h>91</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-6</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1534</x><y>247</y><w>39</w><h>104</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-6</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1365</x><y>0</y><w>767</w><h>754</h></coordinates><panel_attributes>KerelemHandler
+group=group-6</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1014</x><y>377</y><w>195</w><h>117</h></coordinates><panel_attributes>&lt;&lt;interafce&gt;&gt;
+IVedelem
+-
++ id : number
++ allat_ID : number
++ oltas_ID : number
+group=group-5</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>468</x><y>390</y><w>325</w><h>338</h></coordinates><panel_attributes>Vedelem
+-
+- _id : number
+- _allat_ID : number
+- _loltas_ID : number
+-
++ constructor( vedelem : Partial&lt;IVedelem&gt; = {} )
+
++ toJSON() : IVedelem
+
++ set id( value : number ) : number
++ get id() : number
+
++ set allat_ID( value : number ) : number
++ get allat_ID() : number
+
++ set oltas_ID( value : number ) : number
++ get oltas_ID() : number
+group=group-5</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>377</y><w>260</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;.
+group=group-5</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>468</x><y>104</y><w>741</w><h>195</h></coordinates><panel_attributes>VedelemManager
+-
++ &lt;&lt;async&gt;&gt; AllVedelemJSON() : Promise&lt;IVedelem[]&gt;
+
++ &lt;&lt;async&gt;&gt; VedelemByAllatId( id:number ) : Promise&lt;IVedelem[]&gt;
+
++ &lt;&lt;async&gt;&gt; VedelemHozzaadasa( vedelem : Partial&lt;IVedelem&gt; ) : Promise&lt;IVedelem | undefined&gt;
+
++ &lt;&lt;async&gt;&gt; VedelemTorleseByAllatId( id : number ) : Promise&lt;boolean&gt;
+group=group-5</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1092</x><y>286</y><w>39</w><h>117</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-5</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>286</y><w>39</w><h>130</h></coordinates><panel_attributes>lt=&lt;.
+
+group=group-5</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>65</y><w>767</w><h>676</h></coordinates><panel_attributes>VedelemHandler
+group=group-5</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1742</x><y>351</y><w>130</w><h>104</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Ekerelem
+-
+Leadas
+Orokbefogadas
+group=group-6</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1859</x><y>364</y><w>78</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-6</panel_attributes><additional_attributes>10;10;40;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>1560</y><w>156</w><h>143</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Eivar
+-
+Nosteny
+Him
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1443</x><y>1378</y><w>234</w><h>234</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>10;160;160;160;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1235</x><y>1573</y><w>91</w><h>39</h></coordinates><panel_attributes>lt=&lt;-
+group=group-0</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>156</x><y>676</y><w>234</w><h>65</h></coordinates><panel_attributes>Config
+-
++ constructor Config(): Config</panel_attributes><additional_attributes></additional_attributes></element></diagram>
