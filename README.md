@@ -1,5 +1,4 @@
-![Tappancs Állatmenhely](images/banner.png)
+![Tappancs Állatmenhely](Documents/images/banner.png)
 
-# 🐾 Tappancs Állatmenhely
 
 Egy jobb életért, együtt.
